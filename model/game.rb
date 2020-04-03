@@ -61,11 +61,11 @@ class Game
 
  def stock_level()
     if @stock == 0
-      return "Sold Out"
+      return {text:"Sold Out"}
     elsif @stock <= 5
-      return "Low Stock"
-    else
-      return "In Stock"
+      return {text:"Low Stock"}
+    else @stock >= 6
+      return {text:"In Stock"}
     end
   end
 
