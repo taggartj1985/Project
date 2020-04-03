@@ -1,0 +1,6 @@
+class Publisher
+
+
+
+
+end
