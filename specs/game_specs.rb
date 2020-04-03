@@ -6,27 +6,43 @@ Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
 
 class GameTest< MiniTest::Test
 
-  # def initialize(options)
-  #   @id = options['id'].to_i
-  #   @name = options['name']
-  #   @description = options['description']
-  #   @quantity = options['quantity'].to_i
-  #   @rrp = options['rrp'].to_i
-  #   @price = options['price'].to_i
-  #   @publisher_id = options['publisher_id'].to_i
-  #   @theme = options['theme']
-  # end
 
   def setup
-    # @game1 = Game.new(1, "AGOT", "LCG based on hit tv show", 6, 12, 8, 1, "LCG")
-    @publisher = Publisher.new("test")
+    @game1 = Game.new({"name" => "Game Of Thrones",
+                      "description" => "2-player",
+                      "stock" => 10,
+                      "rrp" => 13,
+                      "price" => 8,
+                      "publisher_id" => 1,
+                      "theme" => "Living Card Game"})
   end
 
-  # def test_game_name
-  #   assert_equal("AGOT", @game1.name)
-  # end
-  def test_pub_name
-    assert_equal("test", @publisher.name)
+  def test_game_name
+    assert_equal("Game Of Thrones", @game1.name)
+  end
+
+  def test_game_publisher_name
+    assert_equal(1, @game1.publisher_id)
+  end
+
+  def test_game_theme
+    assert_equal("Living Card Game", @game1.theme)
+  end
+
+  def test_game_stock
+    assert_equal(10, @game1.stock)
+  end
+
+  def test_game_rrp
+    assert_equal(13, @game1.rrp)
+  end
+
+  def test_game_price
+    assert_equal(8, @game1.price)
+  end
+
+  def test_game_description
+    assert_equal("2-player", @game1.description)
   end
 
 
