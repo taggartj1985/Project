@@ -3,7 +3,8 @@ DROP TABLE IF EXISTS publishers;
 
 CREATE TABLE publishers(
   id SERIAL PRIMARY KEY,
-  name VARCHAR(255)
+  name VARCHAR(255),
+  logo VARCHAR(255)
 );
 
 CREATE TABLE games(

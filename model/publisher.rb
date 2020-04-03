@@ -3,18 +3,19 @@ require_relative('./game.rb')
 class Publisher
 
 
-attr_accessor :name
+attr_accessor :name, :logo
 attr_reader :id
 
 def initialize(publisher)
   @id = publisher['id'].to_i if publisher['id']
   @name = publisher['name']
+  @logo = publisher['logo']
 end
 
 def save()
-  sql = "INSERT INTO publishers (name)
-        VALUES ($1) RETURNING id;"
-  values = [@name]
+  sql = "INSERT INTO publishers (name, logo)
+        VALUES ($1, $2) RETURNING id;"
+  values = [@name, @logo]
   @id = SqlRunner.run(sql,values)[0]['id'].to_i
 end
 
