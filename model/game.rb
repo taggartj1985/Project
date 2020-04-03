@@ -26,6 +26,11 @@ class Game
       @id = SqlRunner.run(sql,values)[0]['id'].to_i
     end
 
+    def update()
+      sql = "UPDATE games SET (name, description, stock, rrp, price, publisher_id, theme) = ($1, $2, $3, $4, $5, $6, $7) WHERE id = $8"
+      values = [@name, @description, @stock, @rrp, @price, @publisher_id, @theme, @id]
+      SqlRunner.run(sql, values)
+    end
 
 
     def Game.all()
@@ -48,11 +53,21 @@ class Game
    return nil if game == nil
    return Game.new(game)
  end
- 
+
  def Game.delete_all()
    sql = "DELETE FROM games"
    SqlRunner.run(sql)
  end
+
+ def stock_level()
+    if @stock == 0
+      return "Sold Out"
+    elsif @stock <= 5
+      return "Low Stock"
+    end
+  end
+
+
 
 
 

@@ -15,6 +15,20 @@ class GameTest< MiniTest::Test
                       "price" => 8,
                       "publisher_id" => 1,
                       "theme" => "Living Card Game"})
+    @game2 = Game.new({"name" => "Game Of Thrones",
+                      "description" => "2-player",
+                      "stock" => 0,
+                      "rrp" => 13,
+                      "price" => 8,
+                      "publisher_id" => 1,
+                      "theme" => "Living Card Game"})
+  @game3 = Game.new({"name" => "Game Of Thrones",
+                    "description" => "2-player",
+                    "stock" => 5,
+                    "rrp" => 13,
+                    "price" => 8,
+                    "publisher_id" => 1,
+                    "theme" => "Living Card Game"})
   end
 
   def test_game_name
@@ -43,6 +57,14 @@ class GameTest< MiniTest::Test
 
   def test_game_description
     assert_equal("2-player", @game1.description)
+  end
+
+  def test_stock_level_with_no_stock
+    assert_equal("Sold Out", @game2.stock_level)
+  end
+
+  def test_stock_level_with_low_stock
+    assert_equal("Low Stock", @game3.stock_level)
   end
 
 
