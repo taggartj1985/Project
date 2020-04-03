@@ -1,6 +1,7 @@
 require("minitest/autorun")
 require("minitest/reporters")
 require_relative("../model/game")
+require_relative("../model/publisher")
 Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
 
 class GameTest< MiniTest::Test
@@ -17,11 +18,15 @@ class GameTest< MiniTest::Test
   # end
 
   def setup
-    @game1 = Game.new(1, "AGOT", "LCG based on hit tv show", 6, 12, 8, 1, "LCG")
+    # @game1 = Game.new(1, "AGOT", "LCG based on hit tv show", 6, 12, 8, 1, "LCG")
+    @publisher = Publisher.new("test")
   end
 
-  def test_game_name
-    assert_equal("AGOT", @game1.name)
+  # def test_game_name
+  #   assert_equal("AGOT", @game1.name)
+  # end
+  def test_pub_name
+    assert_equal("test", @publisher.name)
   end
 
 
