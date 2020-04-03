@@ -40,7 +40,7 @@ class Game
     end
 
   def publisher()
-     sql = "SELECT * FROM publishers WHERE id = $1"
+     sql = "SELECT publishers.name FROM publishers WHERE id = $1"
      values = [@publisher_id]
      pub =  SqlRunner.run(sql,values).first()
      return Publisher.new(pub)
@@ -64,8 +64,15 @@ class Game
       return "Sold Out"
     elsif @stock <= 5
       return "Low Stock"
+    else
+      return "In Stock"
     end
   end
+
+def profit()
+  profit = @rrp - @price
+  return profit
+end
 
 
 

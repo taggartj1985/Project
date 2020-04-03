@@ -1,7 +1,8 @@
 <h1>Publishers Stock</h1>
 <%for publisher in @publishers%>
 
-<p><%=publisher.name()%> </p>
-<p><%=publisher.logo()%> </p>
+<p> Name: <%=publisher.name()%> </p>
+<p> Logo: <%=publisher.logo()%> </p>
+<p> Games: <%=publisher.game()%> </p>
 <hr>
 <% end %>

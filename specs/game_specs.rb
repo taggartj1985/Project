@@ -67,6 +67,9 @@ class GameTest< MiniTest::Test
     assert_equal("Low Stock", @game3.stock_level)
   end
 
+  def test_profit
+    assert_equal(5, @game1.profit)
+  end
 
 
 
