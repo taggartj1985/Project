@@ -1,3 +1,6 @@
+require_relative('../db/sql_runner.rb')
+require_relative('./publisher.rb')
+
 class Game
 
   attr_accessor :name, :description, :quantity, :rrp, :price, :publisher_id, :theme
