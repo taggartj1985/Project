@@ -45,7 +45,8 @@ game4 = Game.new({"name" => "Lord Of The Rings",
                   "publisher_id" => publisher1.id,
                   "theme" => "Board Game"})
                   game4.save
-
+game4.name = "Lord Of The Rings Adventure Game"
+game4.update()
 
 
 
