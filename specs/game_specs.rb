@@ -60,15 +60,15 @@ class GameTest< MiniTest::Test
   end
 
   def test_stock_level_with_no_stock
-    assert_equal({text:"Sold Out"}, @game2.stock_level)
+    assert_equal("Sold Out", @game2.stock_level)
   end
 
   def test_stock_level_with_low_stock
-    assert_equal({text:"Low Stock"}, @game3.stock_level)
+    assert_equal("Low Stock", @game3.stock_level)
   end
 
   def test_stock_level_with_in_stock
-    assert_equal({text:"In Stock"}, @game1.stock_level)
+    assert_equal("In Stock", @game1.stock_level)
   end
 
   def test_profit
