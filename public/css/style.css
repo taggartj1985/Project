@@ -3,22 +3,23 @@ body{
   background-color: #008B8B;
 }
 
+.bgimg{ background-image: url:("public/images/background.jpg");}
 .banner{
   width: 80%;
   height: 70%;
   top: 25%;
-  left: 130px;
-  position: absolute;
+  left: 350px;
+  position: relative;
   color: #fff;}
 
-.menu ul{
-  display: inline-flex;
-  margin: 80px;
-}
+  .menu ul{
+    display: inline-flex;
+    margin: 80px;
+  }
 
-.menu ul li{
-  list-style: none;
-  margin: 0 20px;
-  color: #b2b1b1;
-  cursor: pointer;
-}
+  .menu ul li{
+    list-style: none;
+    margin: 0 20px;
+    color: #b2b1b1;
+    cursor: pointer;
+  }

@@ -14,7 +14,7 @@ publisher2 = Publisher.new({"name" => "Space Cowboys", "logo" => "https://cf.gee
 publisher2.save
 
 game1 = Game.new({"name" => "Game Of Thrones",
-                  "description" => "2-player Card Gamen based on the hit tv show!",
+                  "description" => "2-player Card Game based on the hit tv show!",
                   "stock" => 10,
                   "rrp" => 13,
                   "price" => 8,
