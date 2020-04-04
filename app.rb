@@ -20,3 +20,15 @@ get '/publishers' do
   @publishers = Publisher.all()
 erb(:publishers)
 end
+
+get '/games/new' do
+    @games = Game.all()
+    @publishers = Publisher.all()
+  erb(:new)
+  end
+
+  post '/games' do
+  new_game = Game.new(params)
+  new_game.save()
+  erb(:create)
+end

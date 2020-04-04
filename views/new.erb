@@ -1,0 +1,30 @@
+<form action='/games' method="POST">
+  <label for="name">Name:</label>
+    <input id="name" type="text" name="name" required/>
+
+  <label for="description">Description:</label>
+    <input id="description" type="text" name="description" required/>
+
+  <label for="stock">Stock:</label>
+    <input id="stock" type="number" name="stock" required/>
+
+  <label for="rrp">RRP:</label>
+    <input id="rrp" type="number" name="rrp" required/>
+
+  <label for="price">Wholesale:</label>
+    <input id="price" type="number" name="price" required/>
+
+  <label for="publisher">Publisher:</label>
+  <select id="publisher" name="publisher_id">
+    <% for publisher in @publishers %>
+      <option value="<%= publisher.id %>">
+          <%= publisher.name() %>
+      </option>
+    <% end %>
+  </select>
+
+  <label for="theme">Theme:</label>
+    <input id="theme" type="text" name="theme" required/>
+
+  <input type='submit' value="Apply"/>
+</form>
