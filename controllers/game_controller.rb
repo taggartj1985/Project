@@ -20,5 +20,5 @@ get '/games/new' do
   post '/games' do
   new_game = Game.new(params)
   new_game.save()
-  erb(:"games/create")
+  redirect to ("/games")
 end
