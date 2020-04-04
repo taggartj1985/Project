@@ -1,0 +1,24 @@
+body{
+  height: 100%;
+  background-color: #008B8B;
+}
+
+.banner{
+  width: 80%;
+  height: 70%;
+  top: 25%;
+  left: 130px;
+  position: absolute;
+  color: #fff;}
+
+.menu ul{
+  display: inline-flex;
+  margin: 80px;
+}
+
+.menu ul li{
+  list-style: none;
+  margin: 0 20px;
+  color: #b2b1b1;
+  cursor: pointer;
+}
