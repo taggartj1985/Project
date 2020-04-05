@@ -1,0 +1,29 @@
+<a href="/games/new" class ="btn3"><span>New Game</span></a>
+<a href="/games/table" class ="btn4"><span>Table View</span></a>
+<h1>Game Stock</h1>
+<table id="games">
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Stock</th>
+    <th>RRP</th>
+    <th>Wholesale</th>
+    <th>Publisher</th>
+    <th>Theme</th>
+    <th>Profit</th>
+    <th>Stock Level</th>
+  </tr>
+  <tr>
+    <%for game in @games%>
+    <td><%=game.name()%></td>
+    <td><%=game.description()%></td>
+    <td><%=game.stock()%></td>
+    <td><%=game.rrp()%></td>
+    <td><%=game.price()%></td>
+    <td><%=game.publisher.name()%></td>
+    <td><%=game.theme()%></td>
+    <td><%=game.profit()%></td>
+    <td><%=game.stock_level()%></td>
+  </tr>
+  <% end %>
+</table>

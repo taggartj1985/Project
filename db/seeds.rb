@@ -22,7 +22,7 @@ game1 = Game.new({"name" => "Game Of Thrones",
                   "theme" => "Living Card Game"})
                   game1.save
 game2 = Game.new({"name" => "Kune v Lakia",
-                  "description" => "2-player Card Game, About a divourced bunnies fighting over possessions",
+                  "description" => "2-player Card Game, About a divorced bunnies fighting over possessions",
                   "stock" => 5,
                   "rrp" => 10,
                   "price" => 5,

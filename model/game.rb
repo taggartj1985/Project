@@ -46,7 +46,7 @@ class Game
      return Publisher.new(pub)
    end
 
-   def Game.find_game_by_id(id)
+   def Game.find(id)
    sql = "SELECT * FROM games WHERE id = $1"
    values = [id]
    game = SqlRunner.run(sql,values).first

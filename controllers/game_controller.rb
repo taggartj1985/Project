@@ -10,6 +10,11 @@ get '/games' do
   erb(:"games/index")
   end
 
+get '/games/table' do
+    @games = Game.all()
+  erb(:"games/table")
+  end
+
 
 get '/games/new' do
     @games = Game.all()
@@ -21,4 +26,10 @@ get '/games/new' do
   new_game = Game.new(params)
   new_game.save()
   redirect to ("/games")
+end
+
+get '/games/:id' do
+  id = params['id'].to_i()
+  @games = Game.find(id)
+  erb(:"games/show")
 end
