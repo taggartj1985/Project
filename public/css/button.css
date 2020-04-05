@@ -6,7 +6,7 @@
   color: #fff;
   border: 2px solid transparent;
   border-radius: 20px;
-  background-image: linear-gradient(#008B8B,#008B8B),
+  background-image: linear-gradient(#1abc9c,#1abc9c),
   radial-gradient(circle at top left, #FF0000, #0000FF
 );
   background-origin: border-box;
@@ -20,7 +20,7 @@
   color: #fff;
   border: 2px solid transparent;
   border-radius: 20px;
-  background-image: linear-gradient(#008B8B,#008B8B),
+  background-image: linear-gradient(#1abc9c,#1abc9c),
   radial-gradient(circle at top left, #FF0000, #0000FF
 );
   background-origin: border-box;
@@ -44,7 +44,7 @@
   color: #fff;
   border: 2px solid transparent;
   border-radius: 20px;
-  background-image: linear-gradient(#008B8B,#008B8B),
+  background-image: linear-gradient(#1abc9c,#1abc9c),
   radial-gradient(circle at top left, #FF0000, #0000FF
 );
   background-origin: border-box;

@@ -3,13 +3,14 @@ body{
   background-color: #008B8B;
 }
 
-.bgimg{ background-image: url:("public/images/background.jpg");}
+.header{padding: 2px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px;}
+
 .banner{
-  width: 80%;
-  height: 70%;
-  top: 25%;
-  left: 350px;
-  position: relative;
+  text-align: center;
   color: #fff;}
 
   .menu ul{
