@@ -3,7 +3,7 @@
 <h1>Quick View Of Games</h1>
 
 <% for game in @games %>
-  <p><%= game.name %>  </p>
+  <h3><%= game.name %>  </h3>
   <p><%= game.stock_level %> </p>
   <p>
     <a href="/games/<%= game.id %>">Show Full Details</a>

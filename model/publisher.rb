@@ -26,7 +26,7 @@ def Publisher.all()
 end
 
 def game()
-  sql = "SELECT * FROM games WHERE publisher_id = $1"
+  sql = "SELECT games.name FROM games WHERE publisher_id = $1"
   values = [@id]
   all_games = SqlRunner.run(sql,values)
   return all_games.map{|games| Game.new(games)}
