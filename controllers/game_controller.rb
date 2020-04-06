@@ -28,6 +28,12 @@ get '/games/new' do
   redirect to ("/games")
 end
 
+get '/games/:id/edit' do
+  id = params['id'].to_i()
+  @games = Game.find(id)
+  erb(:"games/edit")
+end
+
 get '/games/:id' do
   id = params['id'].to_i()
   @games = Game.find(id)

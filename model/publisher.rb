@@ -3,19 +3,19 @@ require_relative('./game.rb')
 class Publisher
 
 
-attr_accessor :name, :logo
+attr_accessor :name, :active
 attr_reader :id
 
 def initialize(publisher)
   @id = publisher['id'].to_i if publisher['id']
   @name = publisher['name']
-  @logo = publisher['logo']
+  @active = publisher['active']
 end
 
 def save()
-  sql = "INSERT INTO publishers (name, logo)
+  sql = "INSERT INTO publishers (name, active)
         VALUES ($1, $2) RETURNING id;"
-  values = [@name, @logo]
+  values = [@name, @active]
   @id = SqlRunner.run(sql,values)[0]['id'].to_i
 end
 
@@ -32,17 +32,31 @@ def game()
   return all_games.map{|games| Game.new(games)}
 end
 
-def Publisher.find_publisher_by_id(id)
-  sql = "SELECT * FROM publishers WHERE id = $1"
-  values = [id]
-  publisher = SqlRunner.run(sql,values)
-  return nil if publisher == nil
-  return Publisher.new(publisher)
+
+def Publisher.find(id)
+sql = "SELECT * FROM publishers WHERE id = $1"
+values = [id]
+pub = SqlRunner.run(sql,values).first
+return nil if pub == nil
+return Publisher.new(pub)
 end
 
 def Publisher.delete_all()
   sql = "DELETE FROM publishers"
   SqlRunner.run(sql)
 end
+
+def update()
+  sql = "UPDATE publishers SET (name, active) = ($1, $2) WHERE id = $3"
+  values = [@name, @active]
+  SqlRunner.run(sql, values)
+end
+
+def Publisher.delete(id)
+    sql = "DELETE FROM publishers WHERE id = $1"
+    values = [id]
+    SqlRunner.run(sql, values)
+  end
+
 
 end

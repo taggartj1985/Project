@@ -74,6 +74,12 @@ def profit()
   return profit
 end
 
+def Game.delete(id)
+    sql = "DELETE FROM games WHERE id = $1"
+    values = [id]
+    SqlRunner.run(sql, values)
+  end
+
 
 
 

@@ -1,0 +1,18 @@
+<a href="/publishers/quick" class ="btn3"><span>Quick View</span></a>
+<a href="/publishers" class ="btn4"><span>Table View</span></a>
+
+
+<h1>You can add and save a new publisher to stock</h1>
+<form action='/publishers' method="POST">
+  <label for="name">Name:</label>
+    <input id="name" type="text" name="name" required/>
+
+  <label for="active">Active:</label>
+    <select id="active" name="active">
+
+    <option value=TRUE>Yes</option>
+    <option value=FALSE>No</option>
+    </select>
+
+  <input type='submit' value="Save"/>
+</form>

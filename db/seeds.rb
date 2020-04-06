@@ -6,11 +6,11 @@ Publisher.delete_all
 Game.delete_all
 
 
-publisher1 = Publisher.new({"name" => "Fantasy Flight Games", "logo" => "public/images/ffg_preview.jpg"})
+publisher1 = Publisher.new({"name" => "Fantasy Flight Games", "active" => true})
 publisher1.save
-publisher3 = Publisher.new({"name" => "Babox Games", "logo" => "https://baboxgames.com/modules/ptssliderlayer/images/babox.medium%20690x513.jpg"})
+publisher3 = Publisher.new({"name" => "Babox Games", "active" => true})
 publisher3.save
-publisher2 = Publisher.new({"name" => "Space Cowboys", "logo" => "https://cf.geekdo-images.com/itemrep/img/XUOeT0_fURN_mR7olgXuPJMqrig=/fit-in/246x300/pic2617614.png"})
+publisher2 = Publisher.new({"name" => "Space Cowboys", "active" => true})
 publisher2.save
 
 game1 = Game.new({"name" => "Game Of Thrones",

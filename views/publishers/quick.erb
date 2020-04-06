@@ -1,0 +1,10 @@
+<a href="/publishers/new" class ="btn3"><span>New Publisher</span></a>
+<a href="/publishers" class ="btn4"><span>Table View</span></a>
+
+<% for publisher in @publishers %>
+  <h3><%= publisher.name %>  </h3>
+  <p>
+    <a href="/publishers/<%= publisher.id %>">Show Full Details</a>
+  </p>
+  <hr>
+<% end %>
