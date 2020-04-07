@@ -74,15 +74,11 @@ def profit()
   return profit
 end
 
+# This Is a function where i want to use the games.id to be able to delete the game through the app
 def Game.delete(id)
     sql = "DELETE FROM games WHERE id = $1"
     values = [id]
     SqlRunner.run(sql, values)
   end
-
-
-
-
-
 
 end

@@ -58,5 +58,13 @@ def Publisher.delete(id)
     SqlRunner.run(sql, values)
   end
 
+  def active()
+    if @active == "t"
+      return 'Yes'
+    else
+      return 'No'
+    end
+  end
+
 
 end

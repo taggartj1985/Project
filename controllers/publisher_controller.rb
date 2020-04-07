@@ -26,6 +26,7 @@ get '/publishers/new' do
   redirect to ("/publishers")
   end
 
+
   get '/publishers/:id' do
     id = params['id'].to_i()
     @publishers = Publisher.find(id)
