@@ -3,18 +3,22 @@
 
 <h1>You can edit your stock</h1>
 <form action='/games' method="POST">
+  <p>Name: <%=@games.name()%></p>
   <label for="name">Name:</label>
     <input id="name" type="text" name="name" required/>
-
+<p>Description: <%=@games.description()%></p>
   <label for="description">Description:</label>
     <input id="description" type="text" name="description" required/>
 
+<p>Stock: <%=@games.stock()%></p>
   <label for="stock">Stock:</label>
     <input id="stock" type="number" name="stock" required/>
 
+<p>RRP: <%=@games.rrp()%></p>
   <label for="rrp">RRP:</label>
     <input id="rrp" type="number" name="rrp" required/>
 
+<p>Wholesale: <%=@games.price()%></p>
   <label for="price">Wholesale:</label>
     <input id="price" type="number" name="price" required/>
 
@@ -27,6 +31,7 @@
     <% end %>
   </select>
 <div></div>
+<p>Theme:<%=@games.theme()%></p>
   <label for="theme">Theme:</label>
     <input id="theme" type="text" name="theme" required/>
 

@@ -34,11 +34,11 @@ end
 
 
 def Publisher.find(id)
-sql = "SELECT * FROM publishers WHERE id = $1"
-values = [id]
-pub = SqlRunner.run(sql,values).first
-return nil if pub == nil
-return Publisher.new(pub)
+  sql = "SELECT * FROM publishers WHERE id = $1"
+  values = [id]
+  pub = SqlRunner.run(sql,values).first
+  return nil if pub == nil
+  return Publisher.new(pub)
 end
 
 def Publisher.delete_all()
@@ -56,14 +56,6 @@ def Publisher.delete(id)
     sql = "DELETE FROM publishers WHERE id = $1"
     values = [id]
     SqlRunner.run(sql, values)
-  end
-
-  def active()
-    if @active == "t"
-      return 'Yes'
-    else
-      return 'No'
-    end
   end
 
 
