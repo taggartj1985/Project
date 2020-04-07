@@ -31,7 +31,14 @@ end
 get '/games/:id/edit' do
   id = params['id'].to_i()
   @games = Game.find(id)
+  @publishers = Publisher.all()
   erb(:"games/edit")
+end
+
+post '/games/:id/delete' do
+  id = params['id'].to_i()
+  Game.delete(id)
+  redirect to '/games'
 end
 
 get '/games/:id' do

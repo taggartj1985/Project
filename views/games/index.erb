@@ -7,6 +7,10 @@
   <p><%= game.stock_level %> </p>
   <p>
     <a href="/games/<%= game.id %>">Show Full Details</a>
+    <p><a href="/games/<%= game.id %>/edit">Edit</a></p>
+    <form action="/games/<%=game.id%>/delete" method="POST">
+  <button type="submit">Delete</button>
+</form>
   </p>
   <hr>
 <% end %>
