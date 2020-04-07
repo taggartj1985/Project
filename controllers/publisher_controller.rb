@@ -26,9 +26,8 @@ get '/publishers/new' do
   redirect to ("/publishers")
   end
 
-
-  get '/publishers/:id' do
+  get '/publishers/:id/edit' do
     id = params['id'].to_i()
     @publishers = Publisher.find(id)
-    erb(:"publishers/show")
+    erb(:"/publishers/edit")
   end

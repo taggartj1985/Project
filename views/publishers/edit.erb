@@ -1,0 +1,19 @@
+<a href="/publishers/quick" class ="btn3"><span>Quick View</span></a>
+<a href="/publishers" class ="btn4"><span>Table View</span></a>
+
+<h1>Edit</h1>
+<form action='/publishers' method="POST">
+  <p>Name: <%=@publishers.name()%></p>
+  <label for="name">Name:</label>
+    <input id="name" type="text" name="name" required/>
+
+<form action="/publishers/<%=@publishers.id%>" method="POST">
+<p>Active: <%=@publishers.active()%></p>
+
+<select name="active" id="active">
+  <option value="true">True</option>
+  <option value="false">False</option>
+</select>
+
+<input type="submit" value="submit">
+</form>
