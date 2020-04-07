@@ -46,3 +46,8 @@ get '/games/:id' do
   @games = Game.find(id)
   erb(:"games/show")
 end
+
+post '/search'  do
+@games = game.find_by_name()
+erb (:"games/show")
+end

@@ -81,4 +81,12 @@ def Game.delete(id)
     SqlRunner.run(sql, values)
   end
 
+  def Game.find_by_name(name)
+  sql = "SELECT * FROM games WHERE name =$1"
+  values = [name]
+  game = SqlRunner.run(sql,values).first
+  return nil if game == nil
+  return Game.new(game)
+  end
+
 end

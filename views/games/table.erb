@@ -14,15 +14,16 @@
     <th>Stock Level</th>
   </tr>
   <tr>
+    <% @games.sort!{|a,b| b.stock <=> a.stock}%>
     <%for game in @games%>
     <td><%=game.name()%></td>
     <td><%=game.description()%></td>
     <td><%=game.stock()%></td>
-    <td><%=game.rrp()%></td>
-    <td><%=game.price()%></td>
+    <td>£<%=game.rrp()%></td>
+    <td>£<%=game.price()%></td>
     <td><%=game.publisher.name()%></td>
     <td><%=game.theme()%></td>
-    <td><%=game.profit()%></td>
+    <td>£<%=game.profit()%></td>
     <td><%=game.stock_level()%></td>
   </tr>
   <% end %>
