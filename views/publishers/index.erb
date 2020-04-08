@@ -12,7 +12,7 @@
   </tr>
   <tr>
     <%for publisher in @publishers%>
-    <td><%=publisher.name()%><a href="/publishers/<%=publisher.id%>/edit">Edit</a></td></td>
+    <td><%=publisher.name()%> <a href="/publishers/<%=publisher.id%>/edit">Edit</a></td></td>
     <td><%=publisher.active()%></td>
   <%for game in publisher.game%>
     <td><%=game.name%></td>

@@ -16,7 +16,8 @@
   <tr>
     <% @games.sort!{|a,b| b.stock <=> a.stock}%>
     <%for game in @games%>
-    <td><%=game.name()%></td>
+    <td><%=game.name()%> <a href="/games/<%=game.id%>/edit">Edit</a> <form action="/games/<%=game.id%>/delete" method="POST">
+  <button type="submit">Delete</button></td>
     <td><%=game.description()%></td>
     <td><%=game.stock()%></td>
     <td>£<%=game.rrp()%></td>
