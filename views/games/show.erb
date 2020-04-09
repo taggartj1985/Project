@@ -1,7 +1,7 @@
 <a href="/games/new" class ="btn3"><span>New Game</span></a>
 <a href="/games/table" class ="btn4"><span>Table View</span></a>
 
-<% @games = @games.sort{|a,b| a.name<=>b.name} %>
+
 <p>Name: <%=@games.name()%></p>
 <p>Description: <%=@games.description()%></p>
 <p>Stock: <%=@games.stock()%></p>
